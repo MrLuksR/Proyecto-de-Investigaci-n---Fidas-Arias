@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítulo 2 · Justificación y limitaciones</title>
+<style>
+:root{--ink:#17233b;--muted:#58657c;--blue:#3159d9;--cyan:#dff6f5;--gold:#f3bd56;--paper:#f5f7fb;--white:#fff;--line:#e1e7f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif}
+.deck{max-width:1100px;margin:auto;padding:24px 20px 50px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px;color:var(--muted);font-size:.9rem}.brand{font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.slide{display:none;min-height:590px;background:var(--white);border:1px solid var(--line);border-radius:24px;padding:clamp(26px,5vw,62px);box-shadow:0 16px 40px #1b2b4b0d;position:relative;overflow:hidden}
+.slide.active{display:flex;flex-direction:column;justify-content:center;animation:fade .25s ease}
+@keyframes fade{from{opacity:.45;transform:translateY(5px)}to{opacity:1;transform:none}}
+.slide:after{content:"";position:absolute;width:230px;height:230px;border-radius:50%;background:var(--cyan);right:-100px;top:-105px;z-index:0}
+.slide>*{position:relative;z-index:1}.eyebrow{font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+h1{font-size:clamp(2.3rem,5vw,4.2rem);line-height:1.03;letter-spacing:-.045em;margin:0 0 20px;max-width:850px}
+h2{font-size:clamp(1.8rem,3.7vw,2.8rem);letter-spacing:-.035em;line-height:1.1;margin:0 0 22px}
+h3{margin:0 0 8px;font-size:1.1rem}p{font-size:clamp(1.05rem,1.6vw,1.22rem);line-height:1.65;color:var(--muted);max-width:850px;margin:0 0 15px}
+.lead{font-size:clamp(1.25rem,2vw,1.55rem);color:var(--ink);line-height:1.5}.accent{color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:12px 0 18px}
+.card{padding:22px;border:1px solid var(--line);border-radius:18px;background:#fbfcff}.card p{font-size:1rem;line-height:1.55;margin:0}.num{display:inline-grid;place-items:center;width:35px;height:35px;border-radius:11px;background:#e9eeff;color:var(--blue);font-weight:800;margin-bottom:14px}
+.callout{background:#eef8f7;border-left:5px solid #42aaa5;padding:18px 22px;border-radius:0 14px 14px 0;margin:12px 0 18px;color:#244c55;font-size:1.08rem;line-height:1.6;max-width:850px}
+.question{font-weight:800;font-size:clamp(1.2rem,2vw,1.6rem);color:var(--ink);margin:12px 0}
+.pill{display:inline-block;padding:7px 11px;border-radius:99px;background:#fff3d9;color:#795315;font-weight:700;font-size:.85rem;margin:3px 5px 3px 0}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px}.buttons{display:flex;gap:8px}
+button{border:0;border-radius:12px;padding:12px 17px;font-weight:750;font-size:.95rem;cursor:pointer;background:var(--blue);color:white}button.secondary{background:#e9edf5;color:var(--ink)}button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.progress{height:5px;background:#e5eaf3;border-radius:10px;overflow:hidden;flex:1;max-width:260px}.bar{height:100%;background:var(--blue);width:16.66%;transition:width .2s}.count{font-size:.9rem;color:var(--muted);min-width:52px;text-align:right}
+.small{font-size:.9rem!important}.source{border-top:1px solid var(--line);padding-top:13px;margin-top:20px;font-size:.88rem;color:#69758a}
+@media(max-width:650px){.deck{padding:12px}.slide{min-height:650px;padding:27px 22px;border-radius:18px}.grid{grid-template-columns:1fr}.top{font-size:.78rem}.controls{flex-wrap:wrap}.progress{order:3;max-width:none;flex-basis:100%}}
+@media print{body{background:white}.deck{max-width:none;padding:0}.top,.controls{display:none}.slide{display:flex!important;min-height:95vh;border:0;border-radius:0;box-shadow:none;page-break-after:always}.slide:after{display:none}}
+</style>
+</head>
+<body>
+<div class="deck">
+ <div class="top"><span class="brand">Proyecto de investigación</span><span>Capítulo 2 · Del problema a su fundamentación</span></div>
+
+ <section class="slide active">
+  <div class="eyebrow">Cuerpo del Proyecto · Capítulo 2</div>
+  <h1>¿Por qué investigar y qué puede dificultarlo?</h1>
+  <p class="lead">Justificación de la investigación <span class="accent">·</span> Limitaciones</p>
+  <p>Dos apartados que explican el valor del estudio y anticipan los obstáculos que podrían aparecer durante su desarrollo.</p>
+  <div style="margin-top:18px"><span class="pill">1.4 Justificación</span><span class="pill">1.5 Limitaciones</span></div>
+ </section>
+
+ <section class="slide">
+  <div class="eyebrow">01 · Hilo conductor</div>
+  <h2>¿Qué se trabajó antes?</h2>
+  <p>Para comprender estos apartados, conviene recordar brevemente el recorrido que lleva hasta ellos.</p>
+  <div class="grid">
+   <div class="card"><span class="num">1</span><h3>Planteamiento del problema</h3><p>Se presenta la situación que se quiere estudiar y se delimita qué se investigará.</p></div>
+   <div class="card"><span class="num">2</span><h3>Objetivos</h3><p>Se establece qué se pretende conocer o determinar mediante la investigación.</p></div>
+  </div>
+  <div class="callout">Una vez definido <strong>qué se estudiará</strong> y <strong>qué se busca lograr</strong>, corresponde explicar por qué vale la pena realizar el estudio y qué dificultades podrían surgir.</div>
+ </section>
+
+ <section class="slide">
+  <div class="eyebrow">02 · Punto 1.4</div>
+  <h2>Justificación de la investigación</h2>
+  <p class="lead">Consiste en señalar las razones por las que se realiza la investigación y sus posibles aportes, desde el punto de vista <strong>teórico o práctico</strong>.</p>
+  <div class="grid">
+   <div class="card"><span class="num">A</span><h3>¿Por qué se hace?</h3><p>Explicar la razón que motiva el estudio y la importancia del problema abordado.</p></div>
+   <div class="card"><span class="num">B</span><h3>¿Qué aportará?</h3><p>Indicar qué contribuciones se esperan obtener, ya sean teóricas o prácticas.</p></div>
+  </div>
+  <div class="callout">La justificación no consiste solamente en decir que el tema es interesante: debe expresar razones concretas que fundamenten la realización del estudio.</div>
+ </section>
+
+ <section class="slide">
+  <div class="eyebrow">03 · Cómo redactarla</div>
+  <h2>Tres preguntas orientadoras</h2>
+  <div class="card" style="margin-bottom:12px"><h3>1. ¿Por qué se hace la investigación?</h3><p>¿Qué necesidad, situación o problema motiva realizarla?</p></div>
+  <div class="card" style="margin-bottom:12px"><h3>2. ¿Cuáles serán sus aportes?</h3><p>¿Qué conocimiento o utilidad podría ofrecer el estudio?</p></div>
+  <div class="card"><h3>3. ¿A quiénes pudiera beneficiar?</h3><p>¿Qué personas o grupos podrían aprovechar sus resultados?</p></div>
+  <p class="small" style="margin-top:16px">Estas preguntas, propuestas por Arias, ayudan a organizar las ideas antes de redactar la justificación.</p>
+ </section>
+
+ <section class="slide">
+  <div class="eyebrow">04 · Ejemplo breve</div>
+  <h2>De una idea general a una justificación</h2>
+  <p>Imaginemos una investigación sobre las dificultades de los estudiantes para utilizar una plataforma educativa.</p>
+  <div class="grid">
+   <div class="card"><span class="num">1</span><h3>Razón</h3><p>Se busca comprender qué dificultades aparecen al utilizar la plataforma.</p></div>
+   <div class="card"><span class="num">2</span><h3>Aporte y beneficiarios</h3><p>Los resultados podrían orientar mejoras en el uso de la plataforma y beneficiar a estudiantes y docentes.</p></div>
+  </div>
+  <div class="callout"><strong>Clave:</strong> el ejemplo explica la razón del estudio, su posible aporte y quién podría beneficiarse. No es necesario prometer resultados que todavía no se conocen.</div>
+ </section>
+
+ <section class="slide">
+  <div class="eyebrow">05 · Punto 1.5</div>
+  <h2>Limitaciones de la investigación</h2>
+  <p class="lead">Son los obstáculos que eventualmente pueden presentarse durante el desarrollo de la investigación.</p>
+  <p>Las limitaciones describen dificultades que pueden complicar el trabajo del investigador. Reconocerlas permite mostrar las condiciones reales en las que se desarrolla el estudio.</p>
+  <div class="callout">Arias menciona como ejemplo la falta de cooperación de las personas encuestadas para proporcionar la información solicitada.</div>
+  <p>Esto puede dificultar la recolección de datos y afectar el avance previsto del trabajo.</p>
+ </section>
+
+ <section class="slide">
+  <div class="eyebrow">06 · Ejemplo y distinción</div>
+  <h2>¿Cómo se ve una limitación?</h2>
+  <div class="card" style="margin-bottom:16px"><span class="num">Ejemplo</span><h3>Encuesta con pocas respuestas</h3><p>Si varias personas no responden una encuesta, el investigador puede tener dificultades para reunir la información prevista.</p></div>
+  <p class="question">¿La limitación significa que la investigación no sirve?</p>
+  <p>No necesariamente. Significa que existe un obstáculo que debe reconocerse, porque puede condicionar el desarrollo del estudio o la información que se logra obtener.</p>
+  <div class="callout">No se trata de confundir una limitación con el problema que se investiga: el problema es el asunto de estudio; la limitación es una dificultad que aparece al investigar.</div>
+ </section>
+
+ <section class="slide">
+  <div class="eyebrow">07 · Cierre</div>
+  <h2>Dos apartados que se complementan</h2>
+  <div class="grid">
+   <div class="card"><span class="num">1.4</span><h3>Justificación</h3><p>Explica por qué se realiza el estudio, cuáles podrían ser sus aportes y a quiénes beneficiaría.</p></div>
+   <div class="card"><span class="num">1.5</span><h3>Limitaciones</h3><p>Reconoce los obstáculos que podrían presentarse durante su desarrollo.</p></div>
+  </div>
+  <p class="lead">En síntesis: la justificación fundamenta el valor de investigar; las limitaciones sitúan la investigación en sus condiciones reales.</p>
+  <p class="source">Fuente base: Arias, F. G., <em>El proyecto de investigación</em>, apartado 1.4 “Justificación de la investigación” y apartado 1.5 “Limitaciones”, en el PDF proporcionado.</p>
+ </section>
+
+ <div class="controls">
+  <div class="buttons"><button class="secondary" id="prev" aria-label="Diapositiva anterior">← Anterior</button><button id="next" aria-label="Diapositiva siguiente">Siguiente →</button></div>
+  <div class="progress" aria-label="Progreso de la presentación"><div class="bar" id="bar"></div></div>
+  <div class="count" id="count">1 / 8</div>
+ </div>
+</div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let current=0;
+function show(n){current=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,i)=>s.classList.toggle('active',i===current));document.getElementById('count').textContent=(current+1)+' / '+slides.length;document.getElementById('bar').style.width=((current+1)/slides.length*100)+'%';document.getElementById('prev').disabled=current===0;document.getElementById('next').disabled=current===slides.length-1;document.getElementById('prev').style.opacity=current===0?'.45':'1';document.getElementById('next').style.opacity=current===slides.length-1?'.45':'1'}
+document.getElementById('prev').addEventListener('click',()=>show(current-1));document.getElementById('next').addEventListener('click',()=>show(current+1));document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();show(current+1)}if(e.key==='ArrowLeft'){show(current-1)}});
+show(0);
+</script>
+</body></html>
